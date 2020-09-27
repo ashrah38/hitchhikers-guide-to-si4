@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <!-- navbar -->
+      <nav>
+        <div class="left">
+          <!-- input - size of array -->
+          <div class="input-size">
+            <h3>Array length:</h3>
+            <input id="array-size" type="text" placeholder="50" />
+          </div>
+          <!-- input - manually enter array -->
+          <div class="input-elements">
+            <h3>Enter elements:</h3>
+            <input
+              id="array_elements"
+              type="text"
+              placeholder="21, 12, 13, 42, 55, 8, 91, 79, 80"
+
+            />
+          </div>
+          <!-- handle speed of the algorithm -->
+          <h3>Speed of the algorithm</h3>
+          <input
+            id="speed"
+            type="range"
+            min="1"
+            max="5"
+            step="0.05"
+            value="4"
+          />
+          <!-- generate array -->
+          <div class="buttons">
+            <button id="generate-random">Generate Random Array</button>
+            <button id="generate-custom">Generate Custom Array</button>
+          </div>
+          
+        </div>
+        <!-- right side of the navbar -->
+        <div class="right">
+            <h1>The Hitchhiker's Guide to 2SI4</h1>
+
+            <div class="algos btn-container">
+              <div class="single-btn">
+              <button id="bubble-sort">Bubble</button>
+              <button class="sub-btn" id="bubble-iterate">Single Iteration</button>
+              <button class="sub-btn" id="bubble-swap">Next Swap</button>
+              </div>
+              <div class="single-btn">
+              <button id="selection-sort">Selection</button>
+              <button class="sub-btn" id="selection-iterate">Single Iteration</button>
+              <button class="sub-btn" id="selection-swap">Next Swap</button>
+              </div>
+              <div class="single-btn">
+              <button id="insertion-sort">Insertion</button>
+              <button class="sub-btn" id="insertion-swap">Next Insertion</button>
+              </div>
+              <div class="single-btn">
+              <button id="merge-sort">Merge</button>
+              </div>
+              <div class="single-btn">
+              <button id="quick-sort">Quick</button>
+              </div>
+              <div class="single-btn">
+              <button id="heap-sort">Heap</button>
+              
+            </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- end of navbar -->
+    </header>
+    <!-- main display -->
+    <section>
+      <div id="array_container"></div>
+    </section>
+    <!-- main display -->
+   
+    <!-- javascript -->
+    <script src="./scripts/buttons.js"></script>
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/visualizations.js"></script>
+    <script src="./scripts/bubble_sort.js"></script>
+    <script src="./scripts/selection_sort.js"></script>
+    <script src="./scripts/insertion_sort.js"></script>
+    <script src="./scripts/merge_sort.js"></script>
+    <script src="./scripts/quick_sort.js"></script>
+    <script src="./scripts/heap_sort.js"></script>
+  </body>
+</html>
