@@ -34,7 +34,7 @@ let generateCustomArray = () => {
     barsHTML[i].classList.add("bar");
     barsHTML[i].innerHTML = barHeights[i];
     arrayContainer.appendChild(barsHTML[i]);
-    barsHTML[i].style = `background-color:blue; height: ${
+    barsHTML[i].style = `background-color: #018b7f; height: ${
       5 + barHeights[i] / 4
     }vh`;
   }
@@ -53,7 +53,7 @@ function generateRandomArray() {
     barsHTML[i].classList.add("bar");
     barsHTML[i].innerHTML = barHeights[i];
     arrayContainer.appendChild(barsHTML[i]);
-    barsHTML[i].style = `background-color:blue; height: ${
+    barsHTML[i].style = `background-color: #018b7f; height: ${
       5 + barHeights[i] / 4
     }vh`;
   }
