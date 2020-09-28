@@ -2,27 +2,31 @@ function selectionSort() {
   delayAnimation = 0;
 
   for (let i = 0; i < arraySize; i++) {
-    updateColorAndHeight(barsHTML[i], barHeights[i], "red");
+    updateColorAndHeight(barsHTML[i], barHeights[i], "#8f4fa0");
 
     // the index of the current minimum number
     index_min = i;
 
     for (let j = i + 1; j < arraySize; j++) {
-      updateColorAndHeight(barsHTML[j], barHeights[j], "yellow");
+      updateColorAndHeight(barsHTML[j], barHeights[j], "#cbc412");
 
       if (barHeights[j] < barHeights[index_min]) {
         if (index_min != i) {
           updateColorAndHeight(
             barsHTML[index_min],
             barHeights[index_min],
-            "blue"
+            "#018b7f"
           );
         }
         // then set this bar as the minimum number
         index_min = j;
-        updateColorAndHeight(barsHTML[index_min], barHeights[index_min], "red");
+        updateColorAndHeight(
+          barsHTML[index_min],
+          barHeights[index_min],
+          "#8f4fa0"
+        );
       } else {
-        updateColorAndHeight(barsHTML[j], barHeights[j], "blue");
+        updateColorAndHeight(barsHTML[j], barHeights[j], "#018b7f");
       }
     }
     // swap stuff
@@ -31,13 +35,21 @@ function selectionSort() {
       barHeights[index_min] = barHeights[i];
       barHeights[i] = temp;
 
-      updateColorAndHeight(barsHTML[index_min], barHeights[index_min], "red");
-      updateColorAndHeight(barsHTML[i], barHeights[i], "red");
-      updateColorAndHeight(barsHTML[index_min], barHeights[index_min], "blue");
+      updateColorAndHeight(
+        barsHTML[index_min],
+        barHeights[index_min],
+        "#8f4fa0"
+      );
+      updateColorAndHeight(barsHTML[i], barHeights[i], "#8f4fa0");
+      updateColorAndHeight(
+        barsHTML[index_min],
+        barHeights[index_min],
+        "#018b7f"
+      );
     }
-    updateColorAndHeight(barsHTML[i], barHeights[i], "green");
+    updateColorAndHeight(barsHTML[i], barHeights[i], "#002e17");
   }
-  updateColorAndHeight(barsHTML[i], barHeights[i], "green");
+  updateColorAndHeight(barsHTML[i], barHeights[i], "#002e17");
 }
 
 // NEXT SWAP FOR SELECTION SORT
@@ -46,27 +58,31 @@ function swapNextSelection() {
   delayAnimation = 0;
 
   for (let i = 0; i < arraySize - 1; i++) {
-    updateColorAndHeight(barsHTML[i], barHeights[i], "red");
+    updateColorAndHeight(barsHTML[i], barHeights[i], "#8f4fa0");
 
     // the index of the current minimum number
     index_min = i;
 
     for (let j = i + 1; j < arraySize; j++) {
-      updateColorAndHeight(barsHTML[j], barHeights[j], "yellow");
+      updateColorAndHeight(barsHTML[j], barHeights[j], "#cbc412");
       if (barHeights[j] < barHeights[index_min]) {
         if (index_min != i) {
           updateColorAndHeight(
             barsHTML[index_min],
             barHeights[index_min],
-            "blue"
+            "#018b7f"
           );
         }
         // then set this bar as the minimum number
         index_min = j;
-        updateColorAndHeight(barsHTML[index_min], barHeights[index_min], "red");
+        updateColorAndHeight(
+          barsHTML[index_min],
+          barHeights[index_min],
+          "#8f4fa0"
+        );
         swapFlag = true;
       } else {
-        updateColorAndHeight(barsHTML[j], barHeights[j], "blue");
+        updateColorAndHeight(barsHTML[j], barHeights[j], "#018b7f");
       }
     }
     // swap stuff
@@ -75,16 +91,24 @@ function swapNextSelection() {
       barHeights[index_min] = barHeights[i];
       barHeights[i] = temp;
 
-      updateColorAndHeight(barsHTML[index_min], barHeights[index_min], "red");
-      updateColorAndHeight(barsHTML[i], barHeights[i], "red");
-      updateColorAndHeight(barsHTML[index_min], barHeights[index_min], "blue");
+      updateColorAndHeight(
+        barsHTML[index_min],
+        barHeights[index_min],
+        "#8f4fa0"
+      );
+      updateColorAndHeight(barsHTML[i], barHeights[i], "#8f4fa0");
+      updateColorAndHeight(
+        barsHTML[index_min],
+        barHeights[index_min],
+        "#018b7f"
+      );
     }
-    updateColorAndHeight(barsHTML[i], barHeights[i], "green");
+    updateColorAndHeight(barsHTML[i], barHeights[i], "#002e17");
     if (swapFlag) {
       break;
     }
   }
-  updateColorAndHeight(barsHTML[i], barHeights[i], "green");
+  updateColorAndHeight(barsHTML[i], barHeights[i], "#002e17");
 }
 
 let counter = 0;
@@ -94,27 +118,31 @@ function iterationNextSelection() {
   delayAnimation = 0;
 
   for (let i = counter; i < arraySize - 1; i++) {
-    updateColorAndHeight(barsHTML[i], barHeights[i], "red");
+    updateColorAndHeight(barsHTML[i], barHeights[i], "#8f4fa0");
     // the index of the current minimum number
     index_min = i;
 
     for (let j = i + 1; j < arraySize; j++) {
-      updateColorAndHeight(barsHTML[j], barHeights[j], "yellow");
+      updateColorAndHeight(barsHTML[j], barHeights[j], "#cbc412");
 
       if (barHeights[j] < barHeights[index_min]) {
         if (index_min != i) {
           updateColorAndHeight(
             barsHTML[index_min],
             barHeights[index_min],
-            "blue"
+            "#018b7f"
           );
         }
         // then set this bar as the minimum number
         index_min = j;
-        updateColorAndHeight(barsHTML[index_min], barHeights[index_min], "red");
+        updateColorAndHeight(
+          barsHTML[index_min],
+          barHeights[index_min],
+          "#8f4fa0"
+        );
         iterationFlag = true;
       } else {
-        updateColorAndHeight(barsHTML[j], barHeights[j], "blue");
+        updateColorAndHeight(barsHTML[j], barHeights[j], "#018b7f");
       }
     }
     // swap stuff
@@ -123,11 +151,19 @@ function iterationNextSelection() {
       barHeights[index_min] = barHeights[i];
       barHeights[i] = temp;
 
-      updateColorAndHeight(barsHTML[index_min], barHeights[index_min], "red");
-      updateColorAndHeight(barsHTML[i], barHeights[i], "red");
-      updateColorAndHeight(barsHTML[index_min], barHeights[index_min], "blue");
+      updateColorAndHeight(
+        barsHTML[index_min],
+        barHeights[index_min],
+        "#8f4fa0"
+      );
+      updateColorAndHeight(barsHTML[i], barHeights[i], "#8f4fa0");
+      updateColorAndHeight(
+        barsHTML[index_min],
+        barHeights[index_min],
+        "#018b7f"
+      );
     }
-    updateColorAndHeight(barsHTML[i], barHeights[i], "green");
+    updateColorAndHeight(barsHTML[i], barHeights[i], "#002e17");
     if (iterationFlag) {
       counter++;
       break;
@@ -136,7 +172,7 @@ function iterationNextSelection() {
       counter = 0;
     }
   }
-  updateColorAndHeight(barsHTML[i], barHeights[i], "green");
+  updateColorAndHeight(barsHTML[i], barHeights[i], "#002e17");
 }
 
 // Add functionality to all the buttons

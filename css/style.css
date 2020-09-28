@@ -162,6 +162,7 @@ nav {
   align-items: flex-end;
   border-left: 7px solid brown;
   border-bottom: 7px solid brown;
+  position: relative;
 }
 
 .bar {
@@ -284,3 +285,5 @@ input[type="range"]:focus::-ms-fill-lower {
 input[type="range"]:focus::-ms-fill-upper {
   background: #000;
 }
+
+/* media queries */
